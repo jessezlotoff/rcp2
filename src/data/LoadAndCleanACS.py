@@ -51,8 +51,17 @@ def CleanACS(ACS):
     return ACS
 
 
+def LoadAndCleanACS():
+    """ load and clean already-downloaded ACS data
 
-if __name__ == '__main__':
-   
+    returns: pandas dataframe
+    """
+
     ACS = LoadACS()
     ACS = CleanACS(ACS)
+    return ACS
+
+
+if __name__ == '__main__':
+
+   ACS = LoadAndCleanACS()
